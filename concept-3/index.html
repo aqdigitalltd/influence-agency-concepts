@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alike — Concept 03 · Social Native</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="logo">alike<span>✦</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#switch">Brands</a>
+      <a href="#switch">Creators</a>
+      <a href="#fit">Why fit</a>
+      <a href="#how">How it works</a>
+    </nav>
+    <a href="#contact" class="btn btn-blue btn-sm">Let's collab</a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="chip">✦ brand × creator matchmaking</span>
+        <h1 class="hero-title">
+          <span class="ht">Good brands.</span>
+          <span class="ht">Great <span class="pop pop-blue">creators.</span></span>
+          <span class="ht">Zero <span class="scribble">awkward<svg viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 26 C 40 8, 70 34, 110 18 S 180 6, 220 22 S 280 30, 296 12"/></svg></span> collabs.</span>
+        </h1>
+        <p class="hero-sub">We match brands with creators who actually make sense together.</p>
+        <div class="cta-row">
+          <a href="#switch" class="btn btn-blue" data-open-tab="brands">I'm a Brand <span>→</span></a>
+          <a href="#switch" class="btn btn-orange" data-open-tab="creators">I'm a Creator <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="hero-phones" aria-hidden="true">
+        <div class="phone phone-left">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&h=1067&q=80" alt="">
+          <span class="phone-tag">✦ fashion</span>
+        </div>
+        <div class="phone phone-right">
+          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&h=1067&q=80" alt="">
+          <span class="phone-tag">✦ music</span>
+        </div>
+        <div class="phone phone-center">
+          <div class="story-bars"><span class="done"></span><span class="active"></span><span></span></div>
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&h=1244&q=80" alt="">
+          <div class="match-card">
+            <p class="match-title">it's a match ✦</p>
+            <ul>
+              <li><i>✓</i> audience</li>
+              <li><i>✓</i> content</li>
+              <li><i>✓</i> values</li>
+            </ul>
+          </div>
+        </div>
+        <span class="sticker sticker-orange">vibe check: passed ✓</span>
+        <span class="bubble">wait… this actually fits?</span>
+        <div class="spin-badge">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="spin-circle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+            <text><textPath href="#spin-circle" textLength="448">fit over followers ✦ fit over followers ✦ </textPath></text>
+          </svg>
+          <span>✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKERS -->
+    <div class="tickers" aria-hidden="true">
+      <div class="ticker ticker-blue">
+        <div class="ticker-track">
+          <span>creators ✦ brands ✦ culture ✦ content ✦ connection ✦&nbsp;</span>
+          <span>creators ✦ brands ✦ culture ✦ content ✦ connection ✦&nbsp;</span>
+        </div>
+      </div>
+      <div class="ticker ticker-orange">
+        <div class="ticker-track reverse">
+          <span>no random DMs ● no forced #ads ● just better matches ●&nbsp;</span>
+          <span>no random DMs ● no forced #ads ● just better matches ●&nbsp;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT WE DO -->
+    <section class="section what">
+      <div class="section-head">
+        <span class="chip chip-purple">what we do</span>
+        <h2 class="section-title reveal">We're the bit in the middle that makes collabs <span class="pop pop-orange">not weird.</span></h2>
+      </div>
+
+      <div class="what-cards">
+        <article class="what-card card-blue reveal">
+          <span class="what-emoji">🔍</span>
+          <h3>Find the fit</h3>
+          <p>We dig into audiences, content and values to find creators who genuinely suit a brand — not just whoever's trending this week.</p>
+        </article>
+        <article class="what-card card-purple reveal">
+          <span class="what-emoji">🤝</span>
+          <h3>Run the collab</h3>
+          <p>Briefs, deadlines, terms and approvals. We keep everyone in the loop so nobody's chasing anybody.</p>
+        </article>
+        <article class="what-card card-orange reveal">
+          <span class="what-emoji">🎬</span>
+          <h3>Make it land</h3>
+          <p>We help shape content that feels native to the creator's feed — because people scroll straight past forced ads.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BRANDS VS CREATORS -->
+    <section class="section switch" id="switch" data-switch data-active="brands">
+      <div class="switch-head">
+        <h2 class="section-title">So… which one are you?</h2>
+        <div class="toggle" role="tablist" aria-label="Choose your side">
+          <span class="toggle-thumb" aria-hidden="true"></span>
+          <button role="tab" id="tab-brands" aria-controls="panel-brands" aria-selected="true" data-tab="brands">I'm a Brand</button>
+          <button role="tab" id="tab-creators" aria-controls="panel-creators" aria-selected="false" data-tab="creators">I'm a Creator</button>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-brands" aria-labelledby="tab-brands" data-panel="brands">
+        <div class="panel-copy">
+          <span class="chip chip-light">for brands</span>
+          <h3>Find creators your customers already love.</h3>
+          <ul class="checks">
+            <li>Creators picked for audience fit, not follower count</li>
+            <li>Clear briefs so the content actually lands</li>
+            <li>We handle outreach, terms and timelines</li>
+            <li>Honest takes — even when it's a "not this one"</li>
+          </ul>
+          <a href="#contact" class="btn btn-white">Find my creators <span>→</span></a>
+        </div>
+        <div class="panel-media">
+          <div class="phone phone-panel">
+            <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=700&h=1244&q=80" alt="Sunglasses resting on sand by the sea">
+          </div>
+          <span class="sticker sticker-white s-a">brief: sorted ✓</span>
+          <span class="sticker sticker-ink s-b">right audience ✦</span>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-creators" aria-labelledby="tab-creators" data-panel="creators" hidden>
+        <div class="panel-copy">
+          <span class="chip chip-light">for creators</span>
+          <h3>Get brand deals that actually fit your feed.</h3>
+          <ul class="checks">
+            <li>Opportunities that match what you already make</li>
+            <li>Briefs that let you sound like you</li>
+            <li>Clear terms, clear timelines, no ghosting</li>
+            <li>Someone in your corner for the whole thing</li>
+          </ul>
+          <a href="#contact" class="btn btn-white">Find my brands <span>→</span></a>
+        </div>
+        <div class="panel-media">
+          <div class="phone phone-panel">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=700&h=1244&q=80" alt="A creator posing with sunglasses against a yellow wall">
+          </div>
+          <span class="sticker sticker-white s-a">still you ✓</span>
+          <span class="sticker sticker-ink s-b">no cringe ✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY FIT MATTERS -->
+    <section class="section fit" id="fit">
+      <span class="chip chip-orange">why fit matters</span>
+      <div class="fit-grid">
+        <div>
+          <div class="fit-lines reveal">
+            <p><span class="strike">No random DMs.</span></p>
+            <p><span class="strike">No forced #ads.</span></p>
+            <p class="fit-good">Just better matches.</p>
+          </div>
+          <p class="fit-copy reveal">Big numbers look great in a pitch deck. But if a creator's audience doesn't care about your brand, nothing happens. Fit is what makes content feel real — and real is what people actually stop scrolling for.</p>
+        </div>
+
+        <div class="fit-visual">
+          <div class="dm reveal">
+            <p class="dm-label">the old way</p>
+            <p class="dm-bubble">heyyy love ur page!! 💕 collab?? we'll send free stuff 💸</p>
+            <span class="dm-stamp">left on read</span>
+          </div>
+
+          <div class="fit-card reveal">
+            <p class="fit-card-title">fit check ✦</p>
+            <ul>
+              <li><span>Audience overlaps</span><i>✓</i></li>
+              <li><span>Content style matches</span><i>✓</i></li>
+              <li><span>Values line up</span><i>✓</i></li>
+              <li><span>Goals are clear</span><i>✓</i></li>
+              <li><span>It just makes sense</span><i>✓</i></li>
+            </ul>
+            <p class="fit-card-foot">= a collab worth posting</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section how" id="how">
+      <div class="section-head how-head">
+        <span class="chip chip-blue">how it works</span>
+        <h2 class="section-title reveal">Four steps. <span class="pop pop-purple">Zero chaos.</span></h2>
+        <p class="how-hint">swipe →</p>
+      </div>
+
+      <div class="stories">
+        <article class="story reveal" style="--tint: var(--blue)">
+          <div class="story-bars"><span class="done"></span><span></span><span></span><span></span></div>
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&h=1067&q=80" alt="">
+          <div class="story-body">
+            <span class="story-step">step 01</span>
+            <h3>Tell us the vibe</h3>
+            <p>Brands: your goals, audience and budget. Creators: what you make and who watches it.</p>
+          </div>
+        </article>
+        <article class="story reveal" style="--tint: var(--purple)">
+          <div class="story-bars"><span class="done"></span><span class="done"></span><span></span><span></span></div>
+          <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&w=600&h=1067&q=80" alt="">
+          <div class="story-body">
+            <span class="story-step">step 02</span>
+            <h3>We find the fit</h3>
+            <p>We shortlist matches where audience, content and values actually line up — and tell you why.</p>
+          </div>
+        </article>
+        <article class="story story-ink reveal" style="--tint: var(--orange)">
+          <div class="story-bars"><span class="done"></span><span class="done"></span><span class="done"></span><span></span></div>
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&h=1067&q=80" alt="">
+          <div class="story-body">
+            <span class="story-step">step 03</span>
+            <h3>We sort the details</h3>
+            <p>Briefs, terms, timelines, approvals. All agreed before anything goes live.</p>
+          </div>
+        </article>
+        <article class="story reveal" style="--tint: var(--blue)">
+          <div class="story-bars"><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span></div>
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&h=1067&q=80" alt="">
+          <div class="story-body">
+            <span class="story-step">step 04</span>
+            <h3>Post, review, repeat</h3>
+            <p>Content goes live, we look at what worked, and the next collab gets even better.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto">
+      <span class="chip chip-light">the manifesto ✦</span>
+      <ol class="manifesto-lines">
+        <li class="reveal">Fit beats <span class="m-orange">followers.</span></li>
+        <li class="reveal">Creators aren't <span class="m-blue">billboards.</span></li>
+        <li class="reveal">Everyone can spot a <span class="m-purple">forced #ad.</span></li>
+        <li class="reveal">Good briefs make <span class="m-orange">great content.</span></li>
+        <li class="reveal">If it doesn't fit, <span class="m-blue">we'll say so.</span></li>
+      </ol>
+      <span class="sticker sticker-orange manifesto-sticker">real ones only</span>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta" id="contact">
+      <div class="cta-inner">
+        <h2 class="cta-title">Let's make it <span class="pop pop-ink">make sense.</span></h2>
+        <p>Brand or creator, tell us what you're about and we'll find the fit.</p>
+        <div class="cta-row">
+          <a href="#" class="btn btn-ink">I'm a Brand <span>→</span></a>
+          <a href="#" class="btn btn-white">I'm a Creator <span>→</span></a>
+        </div>
+      </div>
+      <span class="sticker sticker-white cta-s1">no cringe ✓</span>
+      <span class="sticker sticker-blue cta-s2">✦ good matches only</span>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <p class="footer-tag">Brands and creators that actually make sense together.</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#switch">Brands</a>
+        <a href="#switch">Creators</a>
+        <a href="#how">How it works</a>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+      </nav>
+    </div>
+    <p class="footer-word" aria-hidden="true">alike<span>✦</span></p>
+    <div class="footer-bottom">
+      <span>© 2026 alike</span>
+      <span>made for creator culture ✦</span>
+    </div>
+  </footer>
+
+  <a href="../" class="concept-switch">← all concepts <b>03 · social native</b></a>
+
+  <script src="main.js"></script>
+</body>
+</html>

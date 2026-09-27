@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alike — Website Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Archivo:wdth,wght@112,900&family=Instrument+Serif:ital@0;1&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,88,800&display=swap">
+  <style>
+    :root {
+      --bg: #0f0f0e;
+      --surface: #181816;
+      --text: #edeae3;
+      --muted: #8f8b82;
+      --line: rgba(237, 234, 227, 0.12);
+      --gutter: clamp(16px, 4vw, 64px);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .picker {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(40px, 6vw, 72px);
+      max-width: 1440px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: clamp(40px, 6vw, 88px) var(--gutter) 40px;
+    }
+    .intro-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: end;
+    }
+    .eyebrow {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: clamp(36px, 5vw, 68px);
+      font-weight: 600;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+    h1 span { color: var(--muted); }
+    .intro { max-width: 42ch; color: var(--muted); font-size: 17px; }
+
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); }
+    .card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--surface);
+      transition: transform 0.6s var(--ease), border-color 0.4s;
+    }
+    .card:hover { transform: translateY(-6px); border-color: rgba(237, 234, 227, 0.3); }
+
+    .preview {
+      position: relative;
+      aspect-ratio: 4 / 3.4;
+      overflow: hidden;
+      padding: 24px;
+      transition: transform 0.8s var(--ease);
+    }
+    .card:hover .preview { transform: scale(1.02); }
+
+    /* Preview 01 — Bold Creator */
+    .p1 { background: #f1eee6; color: #0e0e0c; display: flex; flex-direction: column; justify-content: space-between; }
+    .p1-meta { display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid rgba(14, 14, 12, 0.16); font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .p1-title { font-family: "Archivo", sans-serif; font-weight: 900; font-stretch: 112%; font-size: clamp(30px, 3.6vw, 52px); line-height: 0.86; letter-spacing: -0.025em; text-transform: uppercase; }
+    .p1-title mark { background: linear-gradient(transparent 58%, #cdff3a 58%, #cdff3a 90%, transparent 90%); color: inherit; }
+    .p1-badge {
+      position: absolute;
+      top: 38%;
+      right: 24px;
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      border: 1.5px solid #0e0e0c;
+      border-radius: 50%;
+      background: #cdff3a;
+      font-size: 24px;
+      animation: spin 12s linear infinite;
+    }
+
+    /* Preview 02 — Premium Minimal */
+    .p2 { background: #f5f1ea; color: #1c1b18; display: flex; flex-direction: column; justify-content: space-between; }
+    .p2-meta { display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid rgba(28, 27, 24, 0.16); font-size: 9px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; }
+    .p2-title { font-family: "Instrument Serif", Georgia, serif; font-size: clamp(30px, 3.4vw, 48px); line-height: 0.96; letter-spacing: -0.02em; }
+    .p2-title em { color: #9a6a4b; }
+    .p2-foot { display: flex; gap: 20px; font-family: "Instrument Serif", Georgia, serif; font-size: 16px; }
+    .p2-foot span { padding-bottom: 3px; border-bottom: 1px solid #1c1b18; }
+
+    /* Preview 03 — Social Native */
+    .p3 {
+      background: #f6f3ec radial-gradient(rgba(18, 17, 24, 0.1) 1px, transparent 1px) 0 0 / 16px 16px;
+      color: #121118;
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-stretch: 88%;
+    }
+    .p3-title { position: relative; z-index: 1; font-size: clamp(28px, 3.2vw, 44px); font-weight: 800; line-height: 0.95; letter-spacing: -0.04em; }
+    .p3-pop { display: inline-block; padding: 0 0.12em; border-radius: 0.16em; background: #2d4bff; color: #fff; transform: rotate(-2deg); }
+    .p3-phone {
+      position: absolute;
+      right: 22px;
+      bottom: -30px;
+      width: 30%;
+      aspect-ratio: 9 / 16;
+      border: 3px solid #121118;
+      border-radius: 18px;
+      background: #7a3cf0 url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=711&q=70") center / cover;
+      box-shadow: 5px 5px 0 #121118;
+      rotate: 6deg;
+    }
+    .p3-sticker {
+      position: absolute;
+      z-index: 2;
+      padding: 6px 12px;
+      border: 2px solid #121118;
+      border-radius: 999px;
+      box-shadow: 2px 2px 0 #121118;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .p3-s1 { left: 24px; bottom: 56px; background: #ff6a1f; rotate: -6deg; }
+    .p3-s2 { left: 42%; bottom: 20px; background: #fff; rotate: 4deg; }
+
+    .meta { display: flex; flex-direction: column; gap: 8px; padding: 24px 24px 28px; border-top: 1px solid var(--line); }
+    .num { color: var(--muted); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+    .meta h2 { font-size: 26px; font-weight: 600; letter-spacing: -0.03em; }
+    .meta p { color: var(--muted); font-size: 15px; }
+    .go { display: inline-flex; gap: 8px; margin-top: 12px; font-size: 15px; font-weight: 500; }
+    .go span { transition: transform 0.4s var(--ease); }
+    .card:hover .go span { transform: translateX(4px); }
+
+    .page-foot { display: flex; justify-content: space-between; gap: 16px; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 1024px) {
+      .cards { grid-template-columns: 1fr; max-width: 560px; }
+      .intro-head { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="picker">
+    <header class="intro-head">
+      <div>
+        <p class="eyebrow">Alike · Website concepts</p>
+        <h1>Three directions.<br><span>Pick the one that feels right.</span></h1>
+      </div>
+      <p class="intro">One brief, three different creative directions. Each concept is a landing page with its own personality, typography and way of telling the story.</p>
+    </header>
+
+    <div class="cards">
+      <a href="concept-1/" class="card">
+        <div class="preview p1" aria-hidden="true">
+          <div class="p1-meta"><span>(Creator partnerships)</span><span>● Now onboarding</span></div>
+          <p class="p1-title">Brands meet<br>their <mark>people.</mark></p>
+          <span class="p1-badge">✺</span>
+        </div>
+        <div class="meta">
+          <span class="num">Concept 01</span>
+          <h2>Bold Creator</h2>
+          <p>Oversized editorial type, asymmetric layouts, scroll-driven moments and an electric-lime edge.</p>
+          <span class="go">View concept <span>→</span></span>
+        </div>
+      </a>
+
+      <a href="concept-2/" class="card">
+        <div class="preview p2" aria-hidden="true">
+          <div class="p2-meta"><span>Creator partnership studio</span><span>01 — Our thinking</span></div>
+          <p class="p2-title">Partnerships people <em>actually</em> believe in.</p>
+          <div class="p2-foot"><span>For Brands →</span><span>For Creators →</span></div>
+        </div>
+        <div class="meta">
+          <span class="num">Concept 02</span>
+          <h2>Premium Minimal</h2>
+          <p>A refined, serif-led consultancy feel. Generous whitespace, thin rules and large photography.</p>
+          <span class="go">View concept <span>→</span></span>
+        </div>
+      </a>
+
+      <a href="concept-3/" class="card">
+        <div class="preview p3" aria-hidden="true">
+          <p class="p3-title">Good brands.<br>Great <span class="p3-pop">creators.</span><br>Zero awkward collabs.</p>
+          <span class="p3-phone"></span>
+          <span class="p3-sticker p3-s1">vibe check: passed ✓</span>
+          <span class="p3-sticker p3-s2">no cringe ✦</span>
+        </div>
+        <div class="meta">
+          <span class="num">Concept 03</span>
+          <h2>Social Native</h2>
+          <p>Internet-native and colourful. 9:16 frames, stickers, tickers and playful UI — still credible.</p>
+          <span class="go">View concept <span>→</span></span>
+        </div>
+      </a>
+    </div>
+
+    <footer class="page-foot">
+      <span>Client concept demo — landing pages only</span>
+      <span>“Alike” is a placeholder working name</span>
+    </footer>
+  </main>
+</body>
+</html>
